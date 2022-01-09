@@ -21,7 +21,7 @@ namespace FastLivePushClient.Handler
 
         public override void ChannelActive(IChannelHandlerContext ctx)
         {
-            logger.Info("connected to server:{0} ， Channel Status:{1}" , ctx.Channel.RemoteAddress  , ctx.Channel.Active);
+            logger.Info("connected to server:{0} , Channel Status:{1}" , ctx.Channel.RemoteAddress  , ctx.Channel.Active);
         }
 
         public override void ChannelInactive(IChannelHandlerContext ctx)
