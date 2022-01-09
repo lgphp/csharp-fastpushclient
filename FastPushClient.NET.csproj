@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{FA681ED3-05EB-439F-AF06-0AD19D4ABDA8}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>FastPushClient.NET</RootNamespace>
+        <AssemblyName>FastPushClient.NET</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Bytebuf, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>packages\Bytebuf.1.0.1\lib\net48\Bytebuf.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="DotNettyAll, Version=2.6.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>packages\DotNettyAll.2.6.0\lib\net471\DotNettyAll.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="EasyEncrypt, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>packages\EasyEncrypt.2.2.1\lib\netstandard2.0\EasyEncrypt.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="EasyEncryption, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>packages\EasyEncryption.1.0.2\lib\EasyEncryption.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="EasyHttp, Version=1.7.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>packages\EasyHttp.1.7.0\lib\net40\EasyHttp.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Google.Protobuf, Version=3.11.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604">
+          <HintPath>packages\Google.Protobuf.3.11.1\lib\net45\Google.Protobuf.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="JsonFx, Version=2.0.1209.2802, Culture=neutral, PublicKeyToken=315052dd637f8a52">
+          <HintPath>packages\JsonFx.2.0.1209.2802\lib\net40\JsonFx.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.Configuration.3.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.3.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.Configuration.Binder.3.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.DependencyInjection.3.1.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.Logging.3.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.3.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.Options, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.Options.3.1.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+          <HintPath>packages\Microsoft.Extensions.Primitives.3.1.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="mscorlib" />
+        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+          <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c">
+          <HintPath>packages\NLog.4.7.13\lib\net45\NLog.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+          <HintPath>packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+          <HintPath>packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.IO.Compression" />
+        <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+          <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+          <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Runtime.Serialization" />
+        <Reference Include="System.ServiceModel" />
+        <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Transactions" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Atomic\AtomicBoolean.cs" />
+        <Compile Include="Atomic\AtomicInt.cs" />
+        <Compile Include="Container\ComponentScan.cs" />
+        <Compile Include="Container\DispatchMessage.cs" />
+        <Compile Include="Container\ObjMapping.cs" />
+        <Compile Include="Controller\ClientController.cs" />
+        <Compile Include="CoreLib\Attributes.cs" />
+        <Compile Include="CoreLib\CoreConst.cs" />
+        <Compile Include="CoreLib\HttpClientCore.cs" />
+        <Compile Include="CoreLib\PushClientCore.cs" />
+        <Compile Include="Entity\AppInfo.cs" />
+        <Compile Include="Entity\MessageBody.cs" />
+        <Compile Include="Entity\PushGateAddress.cs" />
+        <Compile Include="Entity\PushNotification.cs" />
+        <Compile Include="Handler\BizProcessorHandler.cs" />
+        <Compile Include="Handler\ChannelInitializer.cs" />
+        <Compile Include="Handler\DecoderHandler.cs" />
+        <Compile Include="Handler\EncoderHandler.cs" />
+        <Compile Include="Listener\Listener.cs" />
+        <Compile Include="Payload\AbstractPayload.cs" />
+        <Compile Include="Payload\ConnAuthPayload.cs" />
+        <Compile Include="Payload\ConnAuthRespPayload.cs" />
+        <Compile Include="Payload\EnumMessage.cs" />
+        <Compile Include="Payload\HeartBeatPayload.cs" />
+        <Compile Include="Payload\PushMessageAckPayload.cs" />
+        <Compile Include="Payload\PushMessagePayload.cs" />
+        <Compile Include="Payload\ReqConnAuthPayload.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Service\MessageHandle.cs" />
+        <Compile Include="Util\ApiSignUtil.cs" />
+        <Compile Include="Util\ByteBufUtil.cs" />
+        <Compile Include="Util\EncryptionUtil.cs" />
+        <Compile Include="Util\GzipUtil.cs" />
+        <Compile Include="Util\KeyUtil.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="NLog.config" />
+      <Content Include="NLog.xsd" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
