@@ -12,7 +12,7 @@ namespace FastLivePushClient.Handler
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         
-        private PushClient _client;
+        private readonly PushClient _client;
 
         public BizProcessorHandler(PushClient client)
         {

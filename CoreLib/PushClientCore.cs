@@ -213,6 +213,7 @@ namespace FastLivePushClient.CoreLib
                 {
                     _isTcpConnected.Set(true);
                     _isReconnecting.Set(false);
+                    _reconnectCnt.Set(0);
                     _ch = channel;
                     _conlistener(201, $"Connect Success! Ready for Communication: {channel.RemoteAddress} ");
                     SendConnAuthentication();
