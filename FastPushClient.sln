@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastPushClient.NET", "FastPushClient.NET.csproj", "{FA681ED3-05EB-439F-AF06-0AD19D4ABDA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PushClientSDKDemo", "..\PushClientSDKDemo\PushClientSDKDemo\PushClientSDKDemo.csproj", "{233CB582-9A5D-42CE-A98D-719BA57F39A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FA681ED3-05EB-439F-AF06-0AD19D4ABDA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA681ED3-05EB-439F-AF06-0AD19D4ABDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA681ED3-05EB-439F-AF06-0AD19D4ABDA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{233CB582-9A5D-42CE-A98D-719BA57F39A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{233CB582-9A5D-42CE-A98D-719BA57F39A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{233CB582-9A5D-42CE-A98D-719BA57F39A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{233CB582-9A5D-42CE-A98D-719BA57F39A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
