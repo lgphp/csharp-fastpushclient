@@ -32,7 +32,7 @@ namespace FastLivePushClient.Service
                 // 发送心跳
                 c.HeartbeatLoop.ScheduleAsync(c.SendHeartbeatTask, TimeSpan.FromMilliseconds(15000));
                 // 启动发送任务
-                c.SendLoop.ScheduleAsync(c.SendMessageQueneTask, TimeSpan.FromMilliseconds(1000));
+                c.SendLoop.ScheduleAsync(c.SendMessageQueueTask, TimeSpan.FromMilliseconds(1000));
                 // 设置成功回调
                 c.Conlistener(200, "SDK Initial OK , Ready for Send PushMessage");
             }
