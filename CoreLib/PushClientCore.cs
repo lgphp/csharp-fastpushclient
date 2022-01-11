@@ -54,7 +54,7 @@ namespace FastLivePushClient.CoreLib
 
         internal SingleThreadEventLoop SendLoop => _sendLoop;
 
-
+        
         internal ConcurrentQueue<PushMessagePayload> _sendQueue;
 
         internal ClientListener.ConListener Conlistener
@@ -367,7 +367,7 @@ namespace FastLivePushClient.CoreLib
 //            _heartbeatLoop.ShutdownGracefullyAsync(TimeSpan.FromSeconds(2.0), TimeSpan.FromSeconds(5));
         }
 
-
+        private static uint Max_Send_BuffSize = 1_000_000;
         internal void SendMessageQueneTask()
         {
             while (true)
@@ -388,7 +388,7 @@ namespace FastLivePushClient.CoreLib
                 if (IsWriteble())
                 {
                     // 入队
-                    if (_sendQueue.ToArray().Length > 1000)
+                    if (_sendQueue.ToArray().Length > Max_Send_BuffSize)
                     {
                         _sendlistener(500, $"{pushPayload.MessageId} : send too quickly , please slowly!");
                     }
