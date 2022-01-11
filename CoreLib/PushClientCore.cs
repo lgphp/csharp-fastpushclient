@@ -27,8 +27,7 @@ namespace FastLivePushClient.CoreLib
         private SingleThreadEventLoop _sendLoop = new SingleThreadEventLoop();
 
 
-        private Action _sendHeartbeatTask;
-        internal Action SendHeartbeatTask => _sendHeartbeatTask;
+        internal Action SendHeartbeatTask { get; }
 
         private ClientListener.ConListener _conlistener;
         private ClientListener.SendListener _sendlistener;
@@ -101,7 +100,7 @@ namespace FastLivePushClient.CoreLib
             _sendSpeed = 1;
             ComponentScan.Scan();
             // 设置心跳的任务action
-            _sendHeartbeatTask = StartHeartbeatTask;
+            SendHeartbeatTask = StartHeartbeatTask;
             _sendQueue = new ConcurrentQueue<PushMessagePayload>();
         }
 
@@ -171,6 +170,11 @@ namespace FastLivePushClient.CoreLib
 
         private void ConnectServer()
         {
+            if (_pushGateAddress.Length < 1)
+            {
+                _conlistener(504, "can't get any PushGateServer");
+                return;
+            }
             foreach (var pushGateAddr in _pushGateAddress)
             {
                 ConnectServer(pushGateAddr);
