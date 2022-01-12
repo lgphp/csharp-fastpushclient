@@ -40,7 +40,7 @@ namespace FastLivePushClient.Entity
             _data = attachData;
         }
 
-        public static MessageBody Create(string title, string body , Dictionary<string,string> attachData)
+        public static MessageBody Create(string title, string body , Dictionary<string,string> attachData = null)
         {
             return new MessageBody(title, body, attachData);
         }
