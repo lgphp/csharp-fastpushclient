@@ -379,7 +379,14 @@ namespace FastLivePushClient.CoreLib
             }
         }
 
-         private static uint Max_Send_BuffSize = 1_000_000;
+        private   uint Max_Send_BuffSize = 10_000;
+        
+        // 设置发送队列大小
+        public PushClient SetSendBuffSize(uint sendBuffSize)
+        {
+            Max_Send_BuffSize = sendBuffSize;
+            return this;
+        }
         public void SendPushNotification(Notification n)
         {
             if (_isCanSendNotification)
